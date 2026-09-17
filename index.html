@@ -1,37 +1,29 @@
 <!doctype html>
 <html lang="pt-BR">
 <head>
-<meta charset="utf-8" />
-<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no,viewport-fit=cover">
+<meta name="theme-color" content="#050806">
 <title>NOT DUEL</title>
-<link rel="stylesheet" href="styles.css" />
+<link rel="stylesheet" href="assets/css/base.css">
+<link rel="stylesheet" href="assets/css/game.css">
 </head>
 <body>
 <main class="app">
-  <header class="brand"><strong>NOT</strong><span>DUEL</span><div id="liveBadge">● LIVE</div></header>
-
-  <section class="players">
-    <article class="player host"><div class="avatar" id="hostAvatar">H</div><div><small>HOST</small><strong id="hostName">@host</strong></div><b class="mark">X</b></article>
-    <div class="versus">VS</div>
-    <article class="player challenger"><div class="avatar" id="challengerAvatar">?</div><div><small>DESAFIANTE</small><strong id="challengerName">Aguardando...</strong></div><b class="mark">O</b></article>
-  </section>
-
-  <section class="game-wrap">
-    <div class="status" id="status">AGUARDANDO DESAFIANTE</div>
-    <div class="board" id="board" aria-label="Jogo da velha"></div>
-  </section>
-
-  <section class="mission" id="mission">
-    <div class="mission-glow"></div>
-    <small>DESAFIE O HOST</small>
-    <strong>🌹 ENVIE <span id="roseGoal">5</span> ROSAS</strong>
-    <p>Complete o desafio para entrar na partida</p>
-    <div class="progress"><i id="progressBar"></i></div>
-    <span id="progressText">0 / 5</span>
-  </section>
-
-  <footer><span id="hint">Casas livres: comente um número de 1 a 9</span><b>NOT</b></footer>
+<header class="topbar"><div class="logo"><b>NOT</b><span>DUEL</span></div><div class="live">● LIVE</div></header>
+<section class="arena-head">
+<article class="fighter host"><div class="avatar" id="hostAvatar">H</div><div class="identity"><small>HOST</small><strong id="hostName">@host</strong></div><em>X</em></article>
+<div class="vs"><span>VS</span></div>
+<article class="fighter challenger"><div class="avatar" id="challengerAvatar">?</div><div class="identity"><small>DESAFIANTE</small><strong id="challengerName">Aguardando...</strong></div><em>O</em></article>
+</section>
+<section class="game-card">
+<div class="turn" id="status">AGUARDANDO DESAFIANTE</div>
+<div class="board" id="board" aria-label="Tabuleiro 3 por 3"></div>
+<div class="instruction" id="hint">Comente o número de uma casa livre</div>
+</section>
+<section class="mission" id="mission"><span class="eyebrow">ENTRE NA BATALHA</span><strong>🌹 <span id="roseGoal">5</span> ROSAS</strong><p>Complete a missão para desafiar o host</p><div class="progress"><i id="progressBar"></i></div><small id="progressText">0 / 5</small></section>
+<footer><span>LIVE INTERACTIVE</span><b>NOT</b></footer>
 </main>
-<script src="app.js"></script>
+<script type="module" src="assets/js/main.js"></script>
 </body>
 </html>
