@@ -1,0 +1,2 @@
+export const state={goal:5,progress:0,host:{id:null,name:'@host',avatar:null},challenger:null,turn:'challenger',board:Array(9).fill(null),active:false};
+export function resetMatch(){state.active=false;state.challenger=null;state.progress=0;state.turn='challenger';state.board.fill(null)}
