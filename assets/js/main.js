@@ -1,2 +1,2 @@
-import{render}from'./ui.js';import{installConnector}from'./connector.js';import{lockMobileZoom}from'./mobile.js';
-lockMobileZoom();installConnector();render();
+import{render}from'./ui.js';import{installConnector}from'./connector.js';import{installDanielBridge}from'./daniel-bridge.js';import{lockMobileZoom}from'./mobile.js';
+lockMobileZoom();installConnector();installDanielBridge();render();
