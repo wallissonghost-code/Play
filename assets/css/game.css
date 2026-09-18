@@ -13,3 +13,16 @@
 .mission-gift{width:clamp(46px,7vh,64px);height:clamp(46px,7vh,64px)}
 footer{min-height:18px}
 @media(max-height:760px){.avatar{width:38px;height:38px;flex-basis:38px}.fighter{padding:8px}.cell{font-size:42px}.mission p{margin-top:6px}.mission{padding-block:9px}}
+
+/* Full-height composition: inspired by Frutas' explicit 100dvh track allocation.
+   The playfield and mission HUD share all remaining viewport height; footer is compact. */
+.game-card,.mission{height:100%;min-height:0}
+.game-card{overflow:hidden}
+.board{width:min(100%,var(--board-size,100%));max-height:100%;align-self:center}
+.mission{display:flex;flex-direction:column;justify-content:center}
+.mission .eyebrow{flex:0 0 auto}
+.mission-main{flex:1 1 auto;min-height:0;align-content:center;margin-block:clamp(3px,.55vh,7px)}
+.mission-progress-head,.mission .progress,.mission p{flex:0 0 auto}
+footer{height:clamp(20px,2.8vh,28px)}
+@media(min-height:800px){.app{grid-template-rows:auto auto minmax(0,1fr) minmax(150px,.45fr) auto}.mission-gift{width:clamp(52px,7.4vh,70px);height:clamp(52px,7.4vh,70px)}}
+@media(max-height:700px){.app{grid-template-rows:auto auto minmax(0,1fr) minmax(112px,.38fr) auto;gap:6px}.mission-main{grid-template-columns:44px minmax(0,1fr)}.mission-gift{width:44px;height:44px}footer{height:18px}}
